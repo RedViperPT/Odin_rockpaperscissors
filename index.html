@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        <div class="choices-container">
+            <div class="human-choice">
+                <div class="choice-label">
+                    <span class="emoji">🧑</span>
+                </div>
+                <div class="buttons">
+                    <button class="choice" data-choice="rock" aria-label="Choose Rock">
+                        <span class="emoji">✊</span>
+                    </button>
+                    <button class="choice" data-choice="paper" aria-label="Choose Paper">
+                        <span class="emoji">✋</span>
+                    </button>
+                    <button class="choice" data-choice="scissors" aria-label="Choose Scissors">
+                        <span class="emoji">✌️</span>
+                    </button>
+                </div>
+            </div>
+            <div class="computer-choice">
+                <div class="choice-label">
+                    <span class="emoji">🤖</span>
+                </div>
+                <div id="computerChoiceDisplay" class="choice-display">
+                    <span class="emoji">?</span>
+                </div>
+            </div>
+        </div>
+        <div id="results">
+            <p id="roundResult"></p>
+            <div class="score-container">
+                <div class="score-box">
+                    <div class="score-label">You</div>
+                    <div id="humanScore" class="score-value">0</div>
+                </div>
+                <div class="score-box">
+                    <div class="score-label">Computer</div>
+                    <div id="computerScore" class="score-value">0</div>
+                </div>
+            </div>
+            <p id="winner"></p>
+            <button id="playAgain" class="play-again" style="display: none;">Play Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
