@@ -1,6 +1,6 @@
 // Generate a random choice for the computer
 function getComputerChoice() {
-	let computerChoice = Math.floor(Math.random() * 3);
+	const computerChoice = Math.floor(Math.random() * 3);
 	if (computerChoice === 0) {
 		return 'rock';
 	} else if (computerChoice === 1) {
@@ -49,17 +49,17 @@ function playRound(humanChoice, computerChoice) {
 			rock: {
 				rock: "It's a tie!",
 				paper: 'You lose! Paper beats Rock',
-				scissors: 'You win! Rock beats Scissors',
+				scissors: 'You win! Rock beats Scissors'
 			},
 			paper: {
 				rock: 'You win! Paper beats Rock',
 				paper: "It's a tie!",
-				scissors: 'You lose! Scissors beats Paper',
+				scissors: 'You lose! Scissors beats Paper'
 			},
 			scissors: {
 				rock: 'You lose! Rock beats Scissors',
 				paper: 'You win! Scissors beats Paper',
-				scissors: "It's a tie!",
+				scissors: "It's a tie!"
 			},
 		};
 
