@@ -27,9 +27,7 @@ function playRound(humanChoice, computerChoice) {
 	document.querySelectorAll('.choice').forEach((button) => {
 		button.classList.remove('selected');
 	});
-	document
-		.querySelector(`.choice[data-choice="${humanChoice}"]`)
-		.classList.add('selected');
+	document.querySelector(`.choice[data-choice="${humanChoice}"]`).classList.add('selected');
 
 	// Add thinking animation to computer's choice
 	const computerChoices = ['rock', 'paper', 'scissors'];
@@ -49,17 +47,17 @@ function playRound(humanChoice, computerChoice) {
 			rock: {
 				rock: "It's a tie!",
 				paper: 'You lose! Paper beats Rock',
-				scissors: 'You win! Rock beats Scissors'
+				scissors: 'You win! Rock beats Scissors',
 			},
 			paper: {
 				rock: 'You win! Paper beats Rock',
 				paper: "It's a tie!",
-				scissors: 'You lose! Scissors beats Paper'
+				scissors: 'You lose! Scissors beats Paper',
 			},
 			scissors: {
 				rock: 'You lose! Rock beats Scissors',
 				paper: 'You win! Scissors beats Paper',
-				scissors: "It's a tie!"
+				scissors: "It's a tie!",
 			},
 		};
 
@@ -80,15 +78,10 @@ function updateScore() {
 	computerScoreDisplay.textContent = computerScore;
 
 	if (humanScore === 5 || computerScore === 5) {
-		const winner =
-			humanScore === 5
-				? 'You win the game!'
-				: 'The Computer wins the game!';
+		const winner = humanScore === 5 ? 'You win the game!' : 'The Computer wins the game!';
 		winnerDisplay.textContent = winner;
 		// Disable buttons after game end
-		document
-			.querySelectorAll('.choice')
-			.forEach((button) => (button.disabled = true));
+		document.querySelectorAll('.choice').forEach((button) => (button.disabled = true));
 		playAgainButton.style.display = 'block';
 	}
 }
